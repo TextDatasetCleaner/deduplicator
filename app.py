@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 
 from deduplicator import Deduplicator
 
-
 app = Flask(__name__)
 
 duplicator = Deduplicator()
