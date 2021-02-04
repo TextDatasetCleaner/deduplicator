@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 
-from deduplicator import Deduplicator
-
+from deduplicator import Deduplicator  # noqa: I001
 
 app = Flask(__name__)
 
