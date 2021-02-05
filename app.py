@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, jsonify, render_template, request
 
 from deduplicator import Deduplicator  # noqa: I001
 
@@ -18,8 +18,8 @@ def my_form():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    text = request.form['u']
-    return render_template('index2.html', res=str(showdedupl(text)))
+    text = request.form['input']
+    return jsonify({'data': showdedupl(text)})
 
 
 if __name__ == '__main__':
