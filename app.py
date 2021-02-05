@@ -2,7 +2,6 @@ from flask import Flask, jsonify, render_template, request
 
 from deduplicator import Deduplicator  # noqa: I001
 
-
 app = Flask(__name__)
 
 duplicator = Deduplicator()
