@@ -5,6 +5,7 @@ from simhash import Simhash
 
 
 rds = redis.Redis(host='localhost', port=6379, db=0)  # noqa: WPS432
+rds.flushdb()
 
 
 class Deduplicator():
